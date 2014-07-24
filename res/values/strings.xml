@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PM2.5</string>
+    <string name="bestapp_name">BestApp</string>
+    <string name="desc_logo">just is logo</string>
+    <string name="desc_next">just is next</string>
+    <string name="desc_print">just is print</string>
+    <string name="desc_ticket">just is ticket</string>
+    <string name="desc_share">just is share</string>
+    <string name="txt_pm25_selected">= pm2.5 /h</string>
+    <string name="txt_pm25_default">pm2.5 /h</string>
+    <string name="txt_aqi_selected">= aqi</string>
+    <string name="txt_aqi_default">aqi</string>
+    <string name="txt_next">NEXT</string>
+    <string name="txt_print">PRINT</string>
+    <string name="txt_detecting">DETECTING...</string>
+    <string name="txt_printing">PRINTING...</string>
+    <string name="txt_location_fail">FAIL...</string>
+    <string name="get_location_fail">自动定位失败...</string>
+    <string name="get_pm25_fail">未获取到空气质量指数...</string>
+    <string name="feedback_can_not_null">请多说几句吧...</string>
+    <string name="press_again_exit">再按一次退出...</string>
+    <string name="net_wrok_error">网络不给力...</string>
+    <string name="txt_divider">----------------------------------------</string>
+    <string name="txt_share_from_pm25in">www.javaapk.com 提供测试</string>
+    <string name="txt_aqi_report">空气质量监测报告</string>
+    <string name="txt_aqi_report_datetime">发布时间:----年--月--日 --:--</string>
+
+</resources>

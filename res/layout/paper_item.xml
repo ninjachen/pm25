@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingLeft="5.0dip"
+    android:paddingRight="5.0dip" >
+
+    <TextView
+        android:id="@+id/paper_item_position_name"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.0"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="监测站" />
+
+    <TextView
+        android:id="@+id/paper_item_aqi"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.0"
+        android:gravity="center"
+        android:text="AQI" />
+
+    <TextView
+        android:id="@+id/paper_item_pm25"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.0"
+        android:gravity="center"
+        android:text="PM2.5" />
+
+    <TextView
+        android:id="@+id/paper_item_pm10"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.0"
+        android:gravity="center"
+        android:text="PM10" />
+
+</LinearLayout>

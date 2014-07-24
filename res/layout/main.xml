@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bestapp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/layout_ticket_out"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/main_margin_bottom"
+            android:contentDescription="@string/desc_logo"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:id="@+id/layout_relay_paper"
+            android:layout_width="264.0dip"
+            android:layout_height="50.0dip"
+            android:layout_below="@id/img_ticket_out"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/main_paper_margin_top"
+            android:background="@drawable/ticket_paper"
+            android:longClickable="true" />
+
+        <RelativeLayout
+            android:id="@+id/layout_ticket_out"
+            android:layout_width="264.0dip"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/img_ticket_out"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/main_paper_margin_top"
+            android:background="@drawable/ticket_paper"
+            android:longClickable="true" >
+
+            <TextView
+                android:id="@+id/txt_paper_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/paper_txt_paper_report_margin_top"
+                android:text="@string/txt_aqi_report"
+                android:textSize="@dimen/paper_txt_paper_report_text_size" />
+
+            <TextView
+                android:id="@+id/txt_paper_datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_paper_report"
+                android:layout_centerHorizontal="true"
+                android:text="@string/txt_aqi_report_datetime" />
+
+            <TextView
+                android:id="@+id/divide1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_paper_datetime"
+                android:layout_centerHorizontal="true"
+                android:text="@string/txt_divider" />
+
+            <RelativeLayout
+                android:id="@+id/paper_main_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divide1"
+                android:layout_centerHorizontal="true" >
+
+                <TextView
+                    android:id="@+id/txt_paper_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="广州"
+                    android:textSize="@dimen/paper_txt_paper_area_text_size" />
+
+                <TextView
+                    android:id="@+id/txt_paper_aqi_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/txt_paper_area"
+                    android:text="空气质量指数(AQI):" />
+
+                <TextView
+                    android:id="@+id/txt_paper_aqi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/paper_txt_paper_aqi_value_margin"
+                    android:layout_toRightOf="@id/txt_paper_aqi_desc"
+                    android:background="@drawable/aqi_frame"
+                    android:ems="2"
+                    android:gravity="center"
+                    android:padding="@dimen/paper_txt_paper_aqi_value_padding"
+                    android:text="88"
+                    android:textSize="@dimen/paper_txt_paper_aqi_value_text_size" />
+
+                <TextView
+                    android:id="@+id/txt_paper_quality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/txt_paper_aqi_desc"
+                    android:layout_below="@id/txt_paper_aqi_desc"
+                    android:text="等级:良好" />
+
+                <TextView
+                    android:id="@+id/txt_paper_proposal"
+                    android:layout_width="125.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/txt_paper_aqi_desc"
+                    android:layout_below="@id/txt_paper_quality"
+                    android:text="建议:户外活动" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_paper_list_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/paper_main_info"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:ems="6"
+                        android:gravity="center"
+                        android:text="\n监测站"
+                        android:textSize="10.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="\nAQI"
+                        android:textSize="10.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="PM2.5\n(μg/m3)"
+                        android:textSize="10.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="PM10\n(μg/m3)"
+                        android:textSize="10.0sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/txt_divider" />
+
+                <ListView
+                    android:id="@+id/paper_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:clickable="false"
+                    android:divider="@null"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:listSelector="#00000000" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/divide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_paper_list_header"
+                android:layout_centerHorizontal="true"
+                android:text="@string/txt_divider" />
+
+            <TextView
+                android:id="@+id/txt_share_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divide2"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="20.0dip"
+                android:text="@string/txt_share_from_pm25in" />
+
+            <TextView
+                android:id="@+id/txt_paper_feedback_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/paper_txt_paper_report_margin_top"
+                android:text="我想提点建议"
+                android:textSize="@dimen/paper_txt_paper_report_text_size"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_paper_feedback_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_paper_feedback_title"
+                android:layout_centerHorizontal="true"
+                android:text="best advise to way"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/txt_paper_feedback_message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_paper_feedback_desc"
+                android:layout_margin="20.0dip"
+                android:background="@android:color/transparent"
+                android:gravity="top|left|center"
+                android:hint="给way的建议..."
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:lines="10"
+                android:maxLines="10"
+                android:minLines="9"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_ticket_out"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/main_img_ticket_out_margin_top"
+            android:background="@drawable/bg"
+            android:contentDescription="@string/desc_ticket" />
+
+        <ImageView
+            android:id="@+id/img_ticket_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/layout_body"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/desc_ticket"
+            android:src="@drawable/ticket_out" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/layout_body"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/desc_ticket"
+            android:src="@drawable/ticket_shadow" />
+
+        <ImageButton
+            android:id="@+id/btn_paper_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/img_ticket_out"
+            android:layout_alignRight="@id/img_ticket_out"
+            android:layout_marginBottom="@dimen/paper_btn_paper_share_margin_bottom"
+            android:layout_marginRight="@dimen/paper_btn_paper_share_padding_right"
+            android:background="@drawable/share"
+            android:contentDescription="@string/desc_share"
+            android:src="@drawable/share_btn_selector"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/layout_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/body"
+            android:longClickable="true" >
+
+            <RelativeLayout
+                android:id="@+id/layout_led"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/main_layout_led_margin_top"
+                android:background="@drawable/led" >
+
+                <TextView
+                    android:id="@+id/txt_aqi_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_txt_aqi_desc_margin_left"
+                    android:layout_marginTop="@dimen/main_txt_aqi_desc_margin_top"
+                    android:text=" = AQI "
+                    android:textSize="@dimen/main_txt_desc_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_pm25_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_aqi_desc"
+                    android:layout_marginLeft="@dimen/main_txt_pm25_desc_margin_left"
+                    android:text=" = PM2.5 /h "
+                    android:textSize="@dimen/main_txt_desc_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/main_txt_value_margin_right"
+                    android:layout_marginTop="@dimen/main_txt_value_margin_top"
+                    android:text="88888 "
+                    android:textSize="@dimen/main_txt_value_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/main_line_margin_top"
+                    android:text="@string/txt_divider" />
+
+                <TextView
+                    android:id="@+id/txt_city_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/main_txt_city_value_margin_top"
+                    android:text="@string/txt_detecting"
+                    android:textSize="@dimen/main_txt_city_value_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_led_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10.0dip"
+                    android:text="design by"
+                    android:textSize="20.0sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_led_studio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_led_by"
+                    android:layout_centerHorizontal="true"
+                    android:text="bestapp studio"
+                    android:textSize="30.0sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/layout_led"
+                android:layout_marginLeft="@dimen/main_txt_next_margin_left"
+                android:layout_marginTop="@dimen/main_txt_next_margin_top"
+                android:contentDescription="@string/desc_next"
+                android:text="@string/txt_next"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/main_txt_next_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/layout_led"
+                android:layout_marginRight="@dimen/main_txt_print_margin_right"
+                android:layout_marginTop="@dimen/main_txt_print_margin_top"
+                android:contentDescription="@string/desc_print"
+                android:text="@string/txt_print"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/main_txt_print_text_size"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/layout_led"
+                android:layout_marginLeft="@dimen/main_btn_margin_left"
+                android:layout_marginTop="@dimen/main_btn_margin_top"
+                android:background="@null"
+                android:contentDescription="@string/desc_next"
+                android:longClickable="true"
+                android:src="@drawable/btn_next_selector" />
+
+            <ImageButton
+                android:id="@+id/btn_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/layout_led"
+                android:layout_marginRight="@dimen/main_btn_margin_right"
+                android:layout_marginTop="@dimen/main_btn_margin_top"
+                android:background="@null"
+                android:contentDescription="@string/desc_print"
+                android:longClickable="true"
+                android:src="@drawable/btn_print_selector" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
