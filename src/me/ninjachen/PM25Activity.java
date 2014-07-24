@@ -723,7 +723,7 @@ public class PM25Activity extends Activity {
 	/**
 	 * 请求获取位置
 	 */
-	private void requesLocation() {
+	private void requesLocation() {/*Ninja makes a bug
 		if (NetworkUtils.getNetworkState(this) == NetworkUtils.NETWORN_NONE) {
 			Toast.makeText(this, R.string.net_wrok_error, Toast.LENGTH_SHORT)
 					.show();
@@ -753,7 +753,7 @@ public class PM25Activity extends Activity {
 						mAlphaAnim.cancel();
 						mCity.setAnimation(null);
 					}
-				});
+				});*/
 	}
 
 	/**
