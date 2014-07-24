@@ -700,7 +700,10 @@ public class PM25Activity extends Activity {
 
 	protected void onResume() {
 		super.onResume();
-		if (mSetting.getCity().equalsIgnoreCase("auto")) {// 如果需要自动定位
+		if (mSetting.getCity().equalsIgnoreCase("DETECTING...") 
+				||mSetting.getCity().equalsIgnoreCase("auto")
+				||mSetting.getCity().equalsIgnoreCase("fail...")) {// 如果需要自动定位
+//			if (mSetting.getCity().equalsIgnoreCase("auto")) {// 如果需要自动定位
 			if (mSetting.getAutoCity().equals("")) {
 				requesLocation();
 			} else {
